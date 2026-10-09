@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
@@ -10,115 +10,91 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f1f5f9;
-    padding: 20px;
+    background: #f0f4f1;
+    color: #081c15;
+    padding: 24px;
 }
 
 .FormSection {
     width: 100%;
-    max-width: 900px;
+    max-width: 980px;
     background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    border-radius: 28px;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
     overflow: hidden;
 }
 
 .FormContainer {
     display: flex;
-    min-height: 560px;
+    min-height: 580px;
 }
-
 
 .FormLeft {
-    flex: 1;
-    background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
-    padding: 48px 40px;
+    flex: 0.9;
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+    padding: 56px 44px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     color: #ffffff;
     position: relative;
-    overflow: hidden;
 }
 
-
-.FormLeft::before {
+.FormLeft::after {
     content: '';
     position: absolute;
-    top: -50px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(82, 183, 136, 0.15) 0%, transparent 70%);
+    bottom: -50px;
     right: -50px;
-    width: 220px;
-    height: 220px;
-    background: rgba(37, 99, 235, 0.25);
-    filter: blur(60px);
-    border-radius: 50%;
     pointer-events: none;
 }
 
-.LeftBadge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    padding: 6px 14px;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #93c5fd;
-    width: fit-content;
-}
-
-.LeftContent {
-    position: relative;
-    z-index: 1;
-    margin: 40px 0;
-}
-
-.LeftContent h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 14px;
+.LeftContent h1, .LeftContent h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
     color: #ffffff;
-    letter-spacing: -0.5px;
 }
 
 .LeftContent p {
-    color: #94a3b8;
-    font-size: 0.925rem;
+    color: #d8f3dc;
+    font-size: 0.975rem;
     line-height: 1.6;
 }
 
-.LeftFooter {
-    font-size: 0.75rem;
-    color: #64748b;
-}
-
-/* ================= SISI KANAN (Form Input) ================= */
 .FormRight {
     flex: 1.25;
-    padding: 48px 40px;
+    padding: 56px 48px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     background: #ffffff;
+    color: #081c15;
+}
+
+.FrHeading {
+    margin-bottom: 28px;
 }
 
 .FrHeading h1 {
-    font-size: 1.6rem;
-    color: #0f172a;
-    font-weight: 700;
-    margin-bottom: 4px;
+    font-size: 1.85rem;
+    color: #1b4332;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
 }
 
 .FrHeading span {
-    color: #64748b;
-    font-size: 0.875rem;
+    color: #40916c;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 form {
-    margin: 24px 0;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -130,128 +106,211 @@ form {
     align-items: center;
 }
 
-/* Input Tanpa Border */
 .FormLabel input {
     width: 100%;
-    padding: 14px 42px 14px 44px;
-    border: none; /* Border dihilangkan */
-    border-radius: 12px;
-    font-size: 0.9rem;
-    color: #0f172a;
-    background: #f1f5f9; /* Warna background soft */
+    padding: 15px 44px 15px 46px;
+    border: 1.5px solid #d1d9d4;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    color: #081c15;
+    background: #ffffff;
     outline: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .FormLabel input:focus {
-    background: #e2e8f0;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    border-color: #2d6a4f;
+    box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.1);
 }
 
 .FormLabel label {
     position: absolute;
-    left: 44px;
+    left: 46px;
     color: #64748b;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     pointer-events: none;
-    transition: all 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    padding: 0 4px;
 }
 
-/* Floating Label yang Menyatu */
 .FormLabel input:focus ~ label,
 .FormLabel input:not(:placeholder-shown) ~ label {
-    top: 4px;
-    left: 44px;
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: #2563eb;
+    top: 0;
+    left: 38px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2d6a4f;
+    transform: translateY(-50%);
 }
 
 .FormLabel input:focus,
 .FormLabel input:not(:placeholder-shown) {
-    padding-top: 20px;
-    padding-bottom: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-/* Icon Styling */
 .InputIcon {
     position: absolute;
-    left: 14px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: #64748b;
-    transition: color 0.2s ease;
     pointer-events: none;
+    transition: color 0.2s ease;
 }
 
 .FormLabel input:focus ~ .InputIcon {
-    color: #2563eb;
+    color: #2d6a4f;
 }
 
 #ShowPassword {
     position: absolute;
-    right: 14px;
+    right: 16px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: #64748b;
     cursor: pointer;
     transition: color 0.2s ease;
 }
 
 #ShowPassword:hover {
-    color: #0f172a;
+    color: #1b4332;
 }
 
 .FormCheckbox {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 0.825rem;
-    color: #475569;
-    margin-top: 4px;
+    font-size: 0.875rem;
+    color: #334155;
+    margin: 4px 0;
 }
 
 .FormCheckbox input[type="checkbox"] {
-    accent-color: #2563eb;
-    width: 16px;
-    height: 16px;
+    accent-color: #1b4332;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 .FormCheckbox a {
-    color: #0f172a;
+    color: #1b4332;
     font-weight: 600;
+    text-decoration: none;
+}
+
+.FormCheckbox a:hover {
     text-decoration: underline;
 }
 
 button[type="submit"] {
     width: 100%;
-    padding: 14px;
-    background: #2563eb;
+    padding: 16px;
+    background: #1b4332;
     color: #ffffff;
     border: none;
-    border-radius: 12px;
-    font-size: 0.925rem;
-    font-weight: 600;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 6px;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.15);
 }
 
 button[type="submit"]:hover {
-    background: #1d4ed8;
-    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+    background: #2d6a4f;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(27, 67, 50, 0.25);
 }
 
 button[type="submit"]:active {
-    transform: scale(0.98);
+    transform: translateY(0);
 }
 
-.FrFooter {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #94a3b8;
+.InfoTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    margin: 16px 0;
+    font-size: 0.925rem;
 }
+
+.InfoTable th {
+    color: #40916c;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0 12px 4px;
+    text-align: left;
+}
+
+.InfoTable td {
+    padding: 14px 16px;
+    background: #f8faf9;
+    border-top: 1px solid #e2e8e4;
+    border-bottom: 1px solid #e2e8e4;
+}
+
+.InfoTable tr td:first-child {
+    border-left: 1px solid #e2e8e4;
+    border-radius: 12px 0 0 12px;
+    font-weight: 600;
+    color: #1b4332;
+    width: 35%;
+}
+
+.InfoTable tr td:last-child {
+    border-right: 1px solid #e2e8e4;
+    border-radius: 0 12px 12px 0;
+    color: #081c15;
+}
+
+.InfoTable td i {
+    margin-right: 8px;
+    color: #2d6a4f;
+}
+
+.info-box {
+    background: #f8faf9;
+    border: 1px solid #e2e8e4;
+    border-left: 4px solid #52b788;
+    padding: 18px;
+    border-radius: 12px;
+    margin-top: 16px;
+}
+
+.info-box h3 {
+    font-size: 0.95rem;
+    color: #1b4332;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.info-box p {
+    font-size: 0.875rem;
+    color: #40916c;
+    margin-bottom: 3px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    color: #1b4332;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: #2d6a4f;
+}
+

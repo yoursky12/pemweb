@@ -10,51 +10,47 @@
 <body>
     <section class="FormSection">
         <div class="FormContainer">
-            <!-- Sisi Kiri -->
             <div class="FormLeft">
                 <div class="LeftContent">
-                    <h1>Selamat Datang!</h1>
+                    <h1>Selamat Datang</h1>
+                    <p>Silakan mengisi data pada form yang sudah disediakan</p>
                 </div>
             </div>
-
-            <!-- Sisi Kanan -->
             <div class="FormRight">
                 <div class="FrHeading">
                     <h1>Form Pendaftaran</h1>
-                    <span>Silakan lengkapi data di bawah ini</span>
+                    <span>lengkapi data pendaftaran</span>
                 </div>
                 
-                <form method="POST" action="informasi.html">
+                <form method="get" action="informasi.html">
                     <div class="FormLabel FormNama">
-                        <input class="InputName" type="text" name="name" id="name" placeholder=" " required>
+                        <input class="InputName" type="name" name="name" required>
                         <label for="name">Nama Lengkap</label>
                         <i class="InputIcon bx bx-user"></i>
                     </div>
 
                     <div class="FormLabel FormEmail">
-                        <input id="InputEmail" class="InputEmail" type="email" name="email" placeholder=" " required>
-                        <label for="InputEmail">Email</label>
+                        <input class="InputEmail" type="email" name="email" required>
+                        <label for="email">Email</label>
                         <i class="InputIcon bx bx-envelope"></i>
                     </div>
 
                     <div class="FormLabel FormPassword">
-                        <input id="InputPassword" class="InputPassword" type="password" name="password" placeholder=" " required>
-                        <label for="InputPassword">Kata Sandi</label>
+                        <input id="InputPassword" class="InputPassword" type="password" name="password" required>
+                        <label for="password">Kata Sandi</label>
                         <i class="InputIcon bx bx-lock-alt"></i>
                         <i id="ShowPassword" class="bx bx-show"></i>
                     </div>
 
-                    <hr>
-
                     <div class="FormLabel FormNIM">
-                        <input id="InputNIM" class="InputNIM" type="text" name="nim" placeholder=" " required>
-                        <label for="InputNIM">NIM</label>
+                        <input class="InputNIM" type="text" name="nim" required>
+                        <label for="nim">NIM</label>
                         <i class="InputIcon bx bxs-id-card"></i>
                     </div>
 
                     <div class="FormCheckbox">
                         <input type="checkbox" id="accept" name="accept" required>
-                        <label for="accept">Saya telah menyetujui <a href="#">syarat dan ketentuan</a></label>
+                        <label for="accept">Saya menyetujui <a href="#">syarat & ketentuan</a></label>
                     </div>
 
                     <button type="submit">Daftar</button>
