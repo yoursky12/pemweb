@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    padding: 20px;
+}
+
+.FormSection {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+}
+
+.FormContainer {
+    display: flex;
+    min-height: 560px;
+}
+
+
+.FormLeft {
+    flex: 1;
+    background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.FormLeft::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 220px;
+    height: 220px;
+    background: rgba(37, 99, 235, 0.25);
+    filter: blur(60px);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.LeftBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #93c5fd;
+    width: fit-content;
+}
+
+.LeftContent {
+    position: relative;
+    z-index: 1;
+    margin: 40px 0;
+}
+
+.LeftContent h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.LeftContent p {
+    color: #94a3b8;
+    font-size: 0.925rem;
+    line-height: 1.6;
+}
+
+.LeftFooter {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* ================= SISI KANAN (Form Input) ================= */
+.FormRight {
+    flex: 1.25;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+}
+
+.FrHeading h1 {
+    font-size: 1.6rem;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.FrHeading span {
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+form {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.FormLabel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Input Tanpa Border */
+.FormLabel input {
+    width: 100%;
+    padding: 14px 42px 14px 44px;
+    border: none; /* Border dihilangkan */
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: #0f172a;
+    background: #f1f5f9; /* Warna background soft */
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.FormLabel input:focus {
+    background: #e2e8f0;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.FormLabel label {
+    position: absolute;
+    left: 44px;
+    color: #64748b;
+    font-size: 0.875rem;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+/* Floating Label yang Menyatu */
+.FormLabel input:focus ~ label,
+.FormLabel input:not(:placeholder-shown) ~ label {
+    top: 4px;
+    left: 44px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.FormLabel input:focus,
+.FormLabel input:not(:placeholder-shown) {
+    padding-top: 20px;
+    padding-bottom: 8px;
+}
+
+/* Icon Styling */
+.InputIcon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #64748b;
+    transition: color 0.2s ease;
+    pointer-events: none;
+}
+
+.FormLabel input:focus ~ .InputIcon {
+    color: #2563eb;
+}
+
+#ShowPassword {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #64748b;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#ShowPassword:hover {
+    color: #0f172a;
+}
+
+.FormCheckbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.825rem;
+    color: #475569;
+    margin-top: 4px;
+}
+
+.FormCheckbox input[type="checkbox"] {
+    accent-color: #2563eb;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.FormCheckbox a {
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 0.925rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 6px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+button[type="submit"]:hover {
+    background: #1d4ed8;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+.FrFooter {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}

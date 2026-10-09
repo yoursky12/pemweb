@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+</head>
+<body>
+    <section class="FormSection">
+        <div class="FormContainer">
+            <!-- Sisi Kiri -->
+            <div class="FormLeft">
+                <div class="LeftContent">
+                    <h1>Selamat Datang!</h1>
+                </div>
+            </div>
+
+            <!-- Sisi Kanan -->
+            <div class="FormRight">
+                <div class="FrHeading">
+                    <h1>Form Pendaftaran</h1>
+                    <span>Silakan lengkapi data di bawah ini</span>
+                </div>
+                
+                <form method="POST" action="informasi.html">
+                    <div class="FormLabel FormNama">
+                        <input class="InputName" type="text" name="name" id="name" placeholder=" " required>
+                        <label for="name">Nama Lengkap</label>
+                        <i class="InputIcon bx bx-user"></i>
+                    </div>
+
+                    <div class="FormLabel FormEmail">
+                        <input id="InputEmail" class="InputEmail" type="email" name="email" placeholder=" " required>
+                        <label for="InputEmail">Email</label>
+                        <i class="InputIcon bx bx-envelope"></i>
+                    </div>
+
+                    <div class="FormLabel FormPassword">
+                        <input id="InputPassword" class="InputPassword" type="password" name="password" placeholder=" " required>
+                        <label for="InputPassword">Kata Sandi</label>
+                        <i class="InputIcon bx bx-lock-alt"></i>
+                        <i id="ShowPassword" class="bx bx-show"></i>
+                    </div>
+
+                    <hr>
+
+                    <div class="FormLabel FormNIM">
+                        <input id="InputNIM" class="InputNIM" type="text" name="nim" placeholder=" " required>
+                        <label for="InputNIM">NIM</label>
+                        <i class="InputIcon bx bxs-id-card"></i>
+                    </div>
+
+                    <div class="FormCheckbox">
+                        <input type="checkbox" id="accept" name="accept" required>
+                        <label for="accept">Saya telah menyetujui <a href="#">syarat dan ketentuan</a></label>
+                    </div>
+
+                    <button type="submit">Daftar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const inputPassword = document.getElementById("InputPassword");
+        const showPassword = document.getElementById("ShowPassword");
+
+        showPassword.addEventListener("click", () => {
+            if (inputPassword.type === "password") {
+                inputPassword.type = "text";
+                showPassword.classList.replace("bx-show", "bx-hide");
+            } else {
+                inputPassword.type = "password";
+                showPassword.classList.replace("bx-hide", "bx-show");
+            }
+        });
+    </script>
+</body>
+</html>
