@@ -20,39 +20,38 @@
 
 1. **Struktur Utama & Header**
    * `<div class="card">` berfungsi sebagai wadah (*container*) utama tampilan pendaftaran
-   * `<h2 id="form-title">` dan `<span class="sub-header">` menampilkan judul utama halaman serta keterangan nama tugas.
+   * `<h2 id="form-title">` dan `<span class="sub-header">` menampilkan judul utama halaman serta keterangan
 
 2. **Formulir Pendaftaran (`<form>`)**
-   * `<form action="informasi.html" method="GET">` membuat formulir untuk mengirimkan data ke halaman `informasi.html`.
-   * `method="GET"` menetapkan metode pengiriman data melalui URL dalam bentuk *query string*.
+   * `<form action="informasi.html" method="GET">` membuat formulir untuk mengirimkan data ke halaman `informasi.html`
+   * `method="GET"` menetapkan metode pengiriman data melalui URL
 
 3. **Input Nama Lengkap & NIM**
-   * `<label>` memberikan keterangan untuk setiap kolom input.
-   * Input `nama` dan `nim` menggunakan `type="text"` untuk menerima masukan berupa teks atau angka dari pengguna.
-   * Atribut `required` memastikan kolom wajib diisi sebelum formulir dapat dikirimkan.
-   * Atribut `placeholder` menampilkan contoh teks petunjuk pengisian di dalam kolom.
+   * `<label>` memberikan keterangan untuk setiap kolom input
+   * Input `nama` dan `nim` menggunakan `type="text"` untuk menerima masukan berupa teks atau angka
+   * Atribut `required` memastikan kolom wajib diisi sebelum formulir dapat dikirimkan
+   * Atribut `placeholder` menampilkan contoh teks petunjuk pengisian
 
 4. **Input Email & Password**
-   * `type="email"` digunakan untuk memasukkan alamat email dan memungkinkan browser memeriksa format email saat formulir dikirim.
-   * `type="password"` digunakan untuk menyembunyikan karakter yang diketik oleh pengguna demi keamanan.
+   * `type="email"` digunakan untuk memasukkan alamat email dan memungkinkan browser memeriksa format email
+   * `type="password"` digunakan untuk menyembunyikan karakter yang diketik oleh user demi keamanan
 
 5. **Tombol Submit**
-   * `<button type="submit" id="btn-submit">` membuat tombol pendaftaran yang berfungsi untuk mengirimkan seluruh data formulir ke halaman tujuan.
+   * `<button type="submit" id="btn-submit">` membuat tombol pendaftaran yang berfungsi untuk mengirimkan seluruh data formulir ke halaman
 
 ---
 
 ## B. Penjelasan Kode `informasi.html`
 
 1. **Layout Container & Kolom**
-   * `<div class="FormContainer">` membagi halaman menjadi dua bagian (*layout* 2 kolom), yaitu `.FormLeft` untuk informasi status pendaftaran dan `.FormRight` untuk menampilkan detail data mahasiswa.
+   * `<div class="FormContainer">` membagi halaman menjadi dua bagian, yaitu `.FormLeft` dan `.FormRight`
 
 2. **Tabel Detail Mahasiswa (`<table>`)**
-   * `<table>` dengan kelas `.InfoTable` digunakan untuk menampilkan data pendaftar secara terstruktur.
-   * `<th>` membuat sel judul kolom (*Kategori* dan *Detail Informasi*).
-   * `<td>` menampilkan sel data biasa yang berisi ikon `Boxicons` beserta rincian informasi pendaftar (Nama Lengkap, NIM, Email, Jenis Kelamin, Prodi, dan Alamat).
-
+   * `<table>` dengan kelas `.InfoTable` digunakan untuk menampilkan data pendaftar
+   * `<th>` membuat judul kolom (*Kategori* dan *Detail Informasi*).
+   * `<td>` menampilkan data biasa yang berisi ikon `Boxicons` beserta rincian informasi
 3. **Status Pendaftaran & Tombol Kembali**
-   * `<div class="info-box">` menampilkan kotak keterangan status verifikasi pendaftaran mahasiswa.
+   * `<div class="info-box">` menampilkan kotak keterangan status verifikasi pendaftaran
    * `<a href="index.html" class="back-button">` membuat tautan berbentuk tombol yang mengarahkan pengguna kembali ke halaman utama `index.html`.
 
 ---
@@ -62,7 +61,7 @@
 1. **Element Selector**
    * `body`: Mengatur jenis huruf (*font*), warna latar belakang, serta memosisikan konten agar tepat berada di tengah layar (*flexbox*).
    * `label`: Mengatur tampilan teks label kolom input agar cetak tebal dan berwarna abu-abu.
-   * `table`, `th`, `td`: Mengatur lebar tabel 100%, menghilangkan jarak antar sel (*border-collapse*), serta memberi garis pembatas antar baris data.
+   * `table`, `th`, `td`: Mengatur lebar tabel 100%, menghilangkan jarak antar sel (*border-collapse*)
 
 2. **Class Selector**
    * `.card`: Mengatur wadah form pada `index.html` dengan latar putih, batas tipis, dan efek bayangan (*box-shadow*).
